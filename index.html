@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Viviane de Moraes — Fotografia de Família</title>
+  <title>Viviane de Moraes Fotografia — Fotografia de Família</title>
   <style>
-    @import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&family=Parisienne&display=swap);
+    @import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Parisienne&display=swap);
+    
     :root {
       --cream: #f3eee7;
       --paper: #e9dfd2;
@@ -14,38 +15,65 @@
       --ink: #35271f;
       --line: rgba(90,64,49,.22);
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
     body {
       margin: 0;
       background: var(--cream);
       color: var(--ink);
-      font-family: DM Sans, Arial, sans-serif;
+      font-family: 'DM Sans', Arial, sans-serif;
       font-weight: 300;
     }
-    a { color: inherit; text-decoration: none; }
-    section { position: relative; overflow: hidden; }
-    .serif { font-family: Cormorant Garamond, Georgia, serif; }
-    .script { font-family: Parisienne, cursive; }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    section {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .script { font-family: 'Parisienne', cursive; }
+    
     .eyebrow {
-      font-size: .72rem;
+      font-size: .75rem;
       letter-spacing: .24em;
       text-transform: uppercase;
       color: var(--brown2);
     }
-    .container { width: min(1120px, 88vw); margin: auto; }
+    
+    .container {
+      width: min(1120px, 88vw);
+      margin: auto;
+    }
+    
+    /* HERO */
     .hero {
       min-height: 100svh;
       background: #2b211b;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      position: relative;
     }
+    
     .hero:after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(15,10,7,.08) 20%, rgba(15,10,7,.64) 100%);
+      background: linear-gradient(180deg, rgba(15,10,7,.25) 0%, rgba(15,10,7,.75) 100%);
+      z-index: 1;
     }
+    
     .hero img {
       position: absolute;
       inset: 0;
@@ -54,98 +82,152 @@
       object-fit: cover;
       object-position: center;
     }
+    
     .hero-content {
       position: relative;
       z-index: 2;
       width: min(900px, 88vw);
       margin: 0 auto;
-      padding: 7vh 0 9vh;
+      padding: 12vh 0 10vh;
       color: #fff;
-      align-self: flex-start;
     }
+    
     .hero-brand {
-      font-family: Cormorant Garamond, Georgia, serif;
-      font-size: clamp(1.2rem, 2.4vw, 1.9rem);
-      letter-spacing: .12em;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+      letter-spacing: .18em;
       text-transform: uppercase;
-    }
-    .hero-title {
-      font-family: Parisienne, cursive;
-      font-size: clamp(4rem, 10vw, 8rem);
       font-weight: 400;
-      line-height: .9;
-      margin: .2em 0 .15em;
+      margin-bottom: 1.5rem;
+      display: block;
+      color: #f3eee7;
     }
+    
+    .hero-title {
+      font-family: 'Parisienne', cursive;
+      font-size: clamp(3.8rem, 8.5vw, 7rem);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 1.5rem;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    
     .hero-sub {
-      font-family: Cormorant Garamond, Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2.3rem);
-      line-height: 1.08;
-      max-width: 620px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+      font-style: italic;
+      line-height: 1.3;
+      max-width: 650px;
+      color: #e9dfd2;
+      margin: 0;
     }
-    .hero-tag {
-      margin-top: 2.2rem;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      font-size: .7rem;
+    
+    /* SECTIONS */
+    .look {
+      background: var(--cream);
+      padding: 13vh 0;
     }
-    .look { background: var(--cream); padding: 13vh 0; }
+    
     .look-grid {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
       gap: 8vw;
       align-items: center;
     }
-    .look-photo { aspect-ratio: 4/5; overflow: hidden; }
-    .look-photo img { width: 100%; height: 100%; object-fit: cover; }
-    .look-copy { max-width: 520px; }
+    
+    .look-photo {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+    }
+    
+    .look-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .look-copy {
+      max-width: 520px;
+    }
+    
     h2 {
-      font-family: Cormorant Garamond, Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 500;
-      font-size: clamp(3rem, 6vw, 5.4rem);
-      line-height: .9;
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      line-height: .95;
       margin: .35rem 0 1.5rem;
       color: var(--brown);
     }
+    
     .lead {
-      font-family: Cormorant Garamond, Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(1.35rem, 2.2vw, 1.8rem);
-      line-height: 1.28;
+      line-height: 1.35;
     }
+    
     .smallcopy {
       font-size: .95rem;
       line-height: 1.8;
       color: #6a5648;
       margin-top: 1.6rem;
     }
-    .about { background: var(--paper); padding: 13vh 0; }
+    
+    .about {
+      background: var(--paper);
+      padding: 13vh 0;
+    }
+    
     .about-grid {
       display: grid;
       grid-template-columns: 1.05fr 1fr;
       gap: 7vw;
       align-items: center;
     }
-    .about-photo { aspect-ratio: 4/5; max-height: 760px; overflow: hidden; }
+    
+    .about-photo {
+      aspect-ratio: 4/5;
+      max-height: 760px;
+      overflow: hidden;
+    }
+    
     .about-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
     }
-    .about-copy { max-width: 600px; }
+    
+    .about-copy {
+      max-width: 600px;
+    }
+    
     .about-copy p {
-      font-family: Cormorant Garamond, Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.35rem;
       line-height: 1.5;
       margin: 0 0 1.2rem;
     }
+    
     .about-copy .closing {
       font-size: 1.55rem;
       color: var(--brown);
       margin-top: 2rem;
     }
-    .what { background: var(--cream); padding: 14vh 0; }
-    .what-head { margin-bottom: 6vh; }
-    .what-list { border-top: 1px solid var(--line); }
+    
+    .what {
+      background: var(--cream);
+      padding: 14vh 0;
+    }
+    
+    .what-head {
+      margin-bottom: 6vh;
+    }
+    
+    .what-list {
+      border-top: 1px solid var(--line);
+    }
+    
     .what-item {
       display: grid;
       grid-template-columns: 80px 1fr;
@@ -154,31 +236,47 @@
       padding: 2rem 0;
       border-bottom: 1px solid var(--line);
     }
+    
     .what-num {
-      font-family: Cormorant Garamond, Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.2rem;
       color: var(--brown2);
     }
+    
     .what-title {
-      font-family: Cormorant Garamond, Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(1.6rem, 3vw, 2.5rem);
       color: var(--brown);
       font-weight: 500;
     }
-    .portfolios { background: var(--paper); padding: 14vh 0; }
-    .port-head { margin-bottom: 6vh; }
+    
+    .portfolios {
+      background: var(--paper);
+      padding: 14vh 0;
+    }
+    
+    .port-head {
+      margin-bottom: 6vh;
+    }
+    
     .port-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.2rem;
     }
+    
     .port-card {
       position: relative;
       min-height: 62vh;
       overflow: hidden;
       background: #5a4031;
     }
-    .port-card:nth-child(3) { grid-column: 1/-1; min-height: 68vh; }
+    
+    .port-card:nth-child(3) {
+      grid-column: 1/-1;
+      min-height: 68vh;
+    }
+    
     .port-card img {
       position: absolute;
       inset: 0;
@@ -187,13 +285,18 @@
       object-fit: cover;
       transition: transform .7s ease;
     }
+    
     .port-card:after {
       content: "";
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(20,13,9,.68) 100%);
     }
-    .port-card:hover img { transform: scale(1.025); }
+    
+    .port-card:hover img {
+      transform: scale(1.025);
+    }
+    
     .port-info {
       position: absolute;
       z-index: 2;
@@ -202,12 +305,14 @@
       bottom: 2rem;
       color: #fff;
     }
+    
     .port-info h3 {
-      font-family: Cormorant Garamond, Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(2rem, 4vw, 3.4rem);
       font-weight: 500;
       margin: 0 0 .7rem;
     }
+    
     .port-link {
       display: inline-block;
       border: 1px solid rgba(255,255,255,.65);
@@ -216,18 +321,25 @@
       letter-spacing: .16em;
       text-transform: uppercase;
     }
+    
     .contact {
       background: #4e392c;
       color: #f6efe7;
       padding: 16vh 0 10vh;
       text-align: center;
     }
-    .contact h2 { color: #f6efe7; margin-bottom: .2rem; }
+    
+    .contact h2 {
+      color: #f6efe7;
+      margin-bottom: .2rem;
+    }
+    
     .contact .script {
       font-size: clamp(3rem, 7vw, 5.5rem);
       line-height: 1;
       color: #e7d4c1;
     }
+    
     .contact-links {
       display: flex;
       justify-content: center;
@@ -235,6 +347,7 @@
       flex-wrap: wrap;
       margin: 4rem 0;
     }
+    
     .contact-links a {
       border: 1px solid rgba(246,239,231,.45);
       padding: 1rem 1.4rem;
@@ -243,20 +356,23 @@
       letter-spacing: .16em;
       text-transform: uppercase;
     }
+    
     .signature {
-      font-family: Cormorant Garamond, Georgia, serif;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.25rem;
       letter-spacing: .08em;
     }
+    
     .signature span {
       display: block;
-      font-family: DM Sans, Arial, sans-serif;
+      font-family: 'DM Sans', Arial, sans-serif;
       font-size: .62rem;
       letter-spacing: .22em;
       text-transform: uppercase;
       margin-top: .5rem;
       opacity: .75;
     }
+    
     @media(max-width: 760px) {
       .look-grid, .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .look-photo { aspect-ratio: 5/6; }
@@ -266,41 +382,33 @@
       .port-card, .port-card:nth-child(3) { grid-column: auto; min-height: 66svh; }
       .hero-content { padding-bottom: 7vh; }
     }
-    .viviane-name {
-      font-family: "Parisienne", cursive !important;
-      font-size: clamp(2.8rem, 5.2vw, 4.4rem) !important;
-      line-height: .9 !important;
-      color: var(--brown) !important;
-      margin-bottom: 2rem;
-      font-weight: 400;
-      white-space: nowrap;
-    }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO (CAPA OFICIAL) -->
   <section class="hero">
-    <img src="capa.jpg" alt="Viviane de Moraes">
+    <!-- Substitua pelo link real da imagem ou mantenha a sua base64 -->
+    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1920&q=80" alt="Fotografia de Família">
+    
     <div class="hero-content">
-      <div class="hero-brand">Viviane de Moraes</div>
-      <div class="hero-title">Fotografia</div>
-      <div class="hero-sub">Histórias de família contadas com afeto, luz natural e delicadeza.</div>
-      <div class="hero-tag">Ensaio de Família · Gestante · Batizado · Aniversário</div>
+      <span class="hero-brand">Viviane de Moraes Fotografia</span>
+      <h1 class="hero-title">Fotografia de Família</h1>
+      <p class="hero-sub">Você vive o momento, eu cuido de lembrá-lo.</p>
     </div>
   </section>
 
-  <!-- PROPOSTA -->
+  <!-- SEÇÃO APRESENTAÇÃO -->
   <section class="look">
     <div class="container look-grid">
       <div class="look-photo">
-        <img src="capa-familia.jpg" alt="Fotografia de Família">
+        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80" alt="Ensaio de Família">
       </div>
       <div class="look-copy">
-        <div class="eyebrow">A Proposta</div>
-        <h2>O tempo passa rápido demais.</h2>
-        <p class="lead serif">Memórias que ficam para sempre no coração da sua casa.</p>
-        <p class="smallcopy">Nosso olhar é voltado para os gestos sinceros, as risadas soltas e os momentos que parecem simples, mas que se tornam as lembranças mais valiosas da vida em família.</p>
+        <span class="eyebrow">Abordagem</span>
+        <h2>O afeto em cada detalhe</h2>
+        <p class="lead">Registros sensíveis com foco na naturalidade, luz natural e nos laços verdadeiros.</p>
+        <p class="smallcopy">Sem poses forçadas. A ideia é documentar a essência da sua família no ritmo real de vocês, criando memórias que ganham valor com o passar dos anos.</p>
       </div>
     </div>
   </section>
@@ -308,14 +416,14 @@
   <!-- SOBRE -->
   <section class="about">
     <div class="container about-grid">
-      <div class="about-copy">
-        <div class="eyebrow">Sobre Mim</div>
-        <div class="viviane-name">Viviane de Moraes</div>
-        <p>Acredito que a beleza da fotografia mora na verdade de cada momento. Sem poses forçadas, com respeito ao ritmo dos seus filhos e de toda a família.</p>
-        <p class="closing">"Guardar o afeto em forma de imagem é a minha forma de celebrar a vida."</p>
-      </div>
       <div class="about-photo">
-        <img src="viviane.jpg" alt="Viviane de Moraes">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Viviane de Moraes">
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">Sobre</span>
+        <h2>Viviane de Moraes</h2>
+        <p>Acredito que a fotografia é uma forma de guardar o tempo. Meu trabalho é construir um espaço leve onde você possa se sentir confortável para ser você mesmo.</p>
+        <p class="closing script">Com carinho, Viviane</p>
       </div>
     </div>
   </section>
@@ -324,25 +432,25 @@
   <section class="what">
     <div class="container">
       <div class="what-head">
-        <div class="eyebrow">Serviços</div>
+        <span class="eyebrow">Serviços</span>
         <h2>O que fotografamos</h2>
       </div>
       <div class="what-list">
         <div class="what-item">
-          <div class="what-num">01</div>
-          <div class="what-title">Ensaios de Família</div>
+          <span class="what-num">01</span>
+          <span class="what-title">Ensaios de Família & Lifestyle</span>
         </div>
         <div class="what-item">
-          <div class="what-num">02</div>
-          <div class="what-title">Gestante & Casal</div>
+          <span class="what-num">02</span>
+          <span class="what-title">Gestante & Casal</span>
         </div>
         <div class="what-item">
-          <div class="what-num">03</div>
-          <div class="what-title">Batizados & Celebrações</div>
+          <span class="what-num">03</span>
+          <span class="what-title">Batizados & Eventos Íntimos</span>
         </div>
         <div class="what-item">
-          <div class="what-num">04</div>
-          <div class="what-title">Aniversários Infantis</div>
+          <span class="what-num">04</span>
+          <span class="what-title">Aniversários Infantis</span>
         </div>
       </div>
     </div>
@@ -352,32 +460,29 @@
   <section class="portfolios">
     <div class="container">
       <div class="port-head">
-        <div class="eyebrow">Portfólio</div>
-        <h2>Histórias Recentes</h2>
+        <span class="eyebrow">Galeria</span>
+        <h2>Histórias recentes</h2>
       </div>
       <div class="port-grid">
         <div class="port-card">
-          <img src="capa-gestante.jpg" alt="Gestante">
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80" alt="Família">
           <div class="port-info">
-            <div class="eyebrow" style="color: #e7d4c1">Ensaio</div>
-            <h3>Gestante</h3>
-            <a href="https://wa.me/5541991969668?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20ensaio%20gestante." class="port-link">Ver detalhes</a>
+            <h3>Tarde no Campo</h3>
+            <span class="port-link">Ver Ensaio</span>
           </div>
         </div>
         <div class="port-card">
-          <img src="capa-casal.jpg" alt="Casal">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Gestante">
           <div class="port-info">
-            <div class="eyebrow" style="color: #e7d4c1">Conexão</div>
-            <h3>Casal</h3>
-            <a href="https://wa.me/5541991969668?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20ensaio%20casal." class="port-link">Ver detalhes</a>
+            <h3>À Espera de Maya</h3>
+            <span class="port-link">Ver Ensaio</span>
           </div>
         </div>
         <div class="port-card">
-          <img src="capa-batizado.jpg" alt="Batizados e Eventos">
+          <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=1200&q=80" alt="Momento em Família">
           <div class="port-info">
-            <div class="eyebrow" style="color: #e7d4c1">Celebração</div>
-            <h3>Batizados & Eventos</h3>
-            <a href="https://wa.me/5541991969668?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20batizado." class="port-link">Solicitar proposta</a>
+            <h3>Primeiro Aninho</h3>
+            <span class="port-link">Ver Ensaio</span>
           </div>
         </div>
       </div>
@@ -387,16 +492,19 @@
   <!-- CONTATO -->
   <section class="contact">
     <div class="container">
-      <div class="eyebrow" style="color: #e7d4c1">Vamos Conversar?</div>
-      <h2>Reserve sua data</h2>
-      <div class="script">Será um prazer contar sua história</div>
+      <span class="eyebrow" style="color: #e7d4c1;">Vamos conversar?</span>
+      <h2>Reserve a sua data</h2>
+      <p class="script">Será um prazer contar a sua história.</p>
+      
       <div class="contact-links">
-        <a href="https://wa.me/5541991969668?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">WhatsApp</a>
+        <a href="https://wa.me/seunumero" target="_blank">WhatsApp</a>
+        <a href="mailto:contato@vivianedemoraes.com.br">E-mail</a>
         <a href="https://instagram.com" target="_blank">Instagram</a>
       </div>
+      
       <div class="signature">
-        Viviane de Moraes
-        <span>Fotografia de Família</span>
+        Viviane de Moraes Fotografia
+        <span>Todos os direitos reservados</span>
       </div>
     </div>
   </section>
