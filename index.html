@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Viviane de Moraes — Fotografia Afetiva</title>
+
+<meta name="description" content="Fotografia afetiva de família, celebrações e momentos que merecem ser lembrados.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f1ec;
+    color: #272522;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+section {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================
+   PÁGINA 1 — CAPA
+========================= */
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 8vh 8vw;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20,18,15,.72),
+            rgba(20,18,15,.12) 42%,
+            rgba(20,18,15,.08)
+        ),
+        url('capa.jpg') center center / cover no-repeat;
+    color: #fff;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-kicker {
+    font-size: 11px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 8vw, 105px);
+    font-weight: 400;
+    line-height: .9;
+    letter-spacing: -.025em;
+}
+
+.hero-subtitle {
+    margin-top: 25px;
+    font-size: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+/* =========================
+   PÁGINA 2 — PORTFÓLIOS
+========================= */
+
+.portfolios {
+    background: #eeeae4;
+    padding: 10vh 7vw;
+}
+
+.section-intro {
+    max-width: 900px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.section-intro span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 400;
+}
+
+.portfolio-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.portfolio-card {
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    background: #b8b0a6;
+}
+
+.portfolio-card:last-child {
+    grid-column: span 2;
+}
+
+.portfolio-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.62),
+        transparent 55%
+    );
+}
+
+.portfolio-image {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    transition: transform .7s ease;
+}
+
+.portfolio-card:hover .portfolio-image {
+    transform: scale(1.035);
+}
+
+.portfolio-name {
+    position: absolute;
+    z-index: 2;
+    left: 30px;
+    bottom: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.portfolio-number {
+    position: absolute;
+    z-index: 2;
+    right: 28px;
+    top: 25px;
+    font-size: 10px;
+    letter-spacing: .2em;
+}
+
+/* =========================
+   PÁGINA 3 — SOBRE
+========================= */
+
+.about {
+    background: #f4f1ec;
+    display: flex;
+    align-items: center;
+    padding: 9vh 9vw;
+}
+
+.about-inner {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 390px;
+    aspect-ratio: 4 / 5;
+    background:
+        linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.08)),
+        url('viviane.jpg') center / cover no-repeat;
+}
+
+.about-text span {
+    font-size: 10px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+}
+
+.about-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 5vw, 66px);
+    font-weight: 400;
+    margin: 12px 0 30px;
+    line-height: .95;
+}
+
+.about-text p {
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 650px;
+    margin-bottom: 17px;
+}
+
+.about-signature {
+    margin-top: 35px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+}
+
+/* =========================
+   PÁGINA 4 — EXPERIÊNCIA
+========================= */
+
+.experience {
+    background: #282622;
+    color: #f5f1ea;
+    padding: 11vh 9vw;
+}
+
+.experience-inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.experience-heading {
+    margin-bottom: 70px;
+}
+
+.experience-heading span {
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+}
+
+.experience-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(46px, 6vw, 78px);
+    line-height: .95;
+    margin-top: 18px;
+}
+
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.experience-item {
+    padding: 30px 30px 30px 0;
+    border-top: 1px solid rgba(255,255,255,.2);
+}
+
+.experience-item:nth-child(even) {
+    padding-left: 30px;
+    border-left: 1px solid rgba(255,255,255,.2);
+}
+
+.experience-item strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.experience-item p {
+    font-size: 13px;
+    line-height: 1.8;
+    opacity: .78;
+}
+
+/* =========================
+   PÁGINA 5 — CONTATO
+========================= */
+
+.contact {
+    background: #e9e3da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8vh 7vw;
+}
+
+.contact-inner {
+    max-width: 800px;
+}
+
+.contact-small {
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.contact h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 8vw, 95px);
+    font-weight: 400;
+    line-height: .9;
+    margin-bottom: 45px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding: 15px 25px;
+    border: 1px solid #38342f;
+    color: #38342f;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.contact-link:hover {
+    background: #38342f;
+    color: #fff;
+}
+
+.footer {
+    margin-top: 70px;
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    opacity: .55;
+}
+
+/* =========================
+   NUMERAÇÃO
+========================= */
+
+.page-number {
+    position: absolute;
+    bottom: 25px;
+    right: 35px;
+    font-size: 9px;
+    letter-spacing: .2em;
+    opacity: .55;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+
+    section {
+        min-height: auto;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding: 7vh 7vw;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card {
+        height: 390px;
+    }
+
+    .portfolio-card:last-child {
+        grid-column: span 1;
+    }
+
+    .about {
+        padding: 10vh 8vw;
+    }
+
+    .about-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-photo {
+        max-width: 290px;
+    }
+
+    .experience {
+        padding: 10vh 8vw;
+    }
+
+    .experience-list {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item:nth-child(even) {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .contact {
+        min-height: 100svh;
+    }
+
+    .contact h2 {
+        font-size: 65px;
+    }
+
+    .page-number {
+        bottom: 18px;
+        right: 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     PÁGINA 1
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Fotografia afetiva
+        </div>
+
+        <h1>
+            Histórias que<br>
+            merecem ser lembradas.
+        </h1>
+
+        <div class="hero-subtitle">
+            Família · Celebrações · Afeto
+        </div>
+
+    </div>
+
+    <div class="page-number">01 / 05</div>
+
+</section>
+
+
+<!-- =========================
+     PÁGINA 2
+========================= -->
+
+<section class="portfolios">
+
+    <div class="section-intro">
+
+        <span>Portfólios</span>
+
+        <h2>
+            Algumas histórias<br>
+            que já contei.
+        </h2>
+
+    </div>
+
+    <div class="portfolio-grid">
+
+        <a
+            class="portfolio-card"
+            href="https://vivianedemoraes.exposure.com.br/portfolioaniversarioinfantil"
+            target="_blank"
+        >
+
+            <div
+                class="portfolio-image"
+                style="background-image:url('capa-aniversario.jpg')"
+            ></div>
+
+            <span class="portfolio-number">01</span>
+
+            <div class="portfolio-name">
+                Aniversário Infantil
+            </div>
+
+        </a>
+
+
+        <a
+            class="portfolio-card"
+            href="https://vivianedemoraes.exposure.com.br/portfolioensaiodefamlia"
+            target="_blank"
+        >
+
+            <div
+                class="portfolio-image"
+                style="background-image:url('capa-familia.jpg')"
+            ></div>
+
+            <span class="portfolio-number">02</span>
+
+            <div class="portfolio-name">
+                Ensaio de Família
+            </div>
+
+        </a>
+
+
+        <a
+            class="portfolio-card"
+            href="https://vivianedemoraes.exposure.com.br/portfolioensaiodegestante"
+            target="_blank"
+        >
+
+            <div
+                class="portfolio-image"
+                style="background-image:url('capa-gestante.jpg')"
+            ></div>
+
+            <span class="portfolio-number">03</span>
+
+            <div class="portfolio-name">
+                Ensaio de Gestante
+            </div>
+
+        </a>
+
+
+        <a
+            class="portfolio-card"
+            href="https://vivianedemoraes.exposure.com.br/portfolioensaiodecasal"
+            target="_blank"
+        >
+
+            <div
+                class="portfolio-image"
+                style="background-image:url('capa-casal.jpg')"
+            ></div>
+
+            <span class="portfolio-number">04</span>
+
+            <div class="portfolio-name">
+                Ensaio de Casal
+            </div>
+
+        </a>
+
+
+        <a
+            class="portfolio-card"
+            href="https://vivianedemoraes.exposure.com.br/portfoliobatizado"
+            target="_blank"
+        >
+
+            <div
+                class="portfolio-image"
+                style="background-image:url('capa-batizado.jpg')"
+            ></div>
+
+            <span class="portfolio-number">05</span>
+
+            <div class="portfolio-name">
+                Batizado
+            </div>
+
+        </a>
+
+    </div>
+
+    <div class="page-number">02 / 05</div>
+
+</section>
+
+
+<!-- =========================
+     PÁGINA 3
+========================= -->
+
+<section class="about">
+
+    <div class="about-inner">
+
+        <div class="about-photo"></div>
+
+        <div class="about-text">
+
+            <span>Muito prazer</span>
+
+            <h2>
+                Viviane de Moraes
+            </h2>
+
+            <p>
+                Sou fotógrafa curitibana e acredito que a fotografia
+                tem o poder de preservar aquilo que o tempo transforma.
+            </p>
+
+            <p>
+                Minha formação passa pelas Artes Visuais, pelos
+                Processos Fotográficos e pela experiência construída
+                ao longo dos anos fotografando pessoas, famílias
+                e histórias reais.
+            </p>
+
+            <p>
+                Meu olhar é afetivo, leve e documental. Busco registrar
+                conexões verdadeiras, pequenos gestos e momentos que
+                acontecem naturalmente.
+            </p>
+
+            <div class="about-signature">
+                Fotografia para sentir novamente.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page-number">03 / 05</div>
+
+</section>
+
+
+<!-- =========================
+     PÁGINA 4
+========================= -->
+
+<section class="experience">
+
+    <div class="experience-inner">
+
+        <div class="experience-heading">
+
+            <span>O meu olhar</span>
+
+            <h2>
+                Mais do que<br>
+                fotografar.
+            </h2>
+
+        </div>
+
+        <div class="experience-list">
+
+            <div class="experience-item">
+
+                <strong>
+                    Festas & Celebrações
+                </strong>
+
+                <p>
+                    Um registro leve e dinâmico dos momentos que
+                    realmente acontecem: brincadeiras, abraços,
+                    encontros e detalhes da celebração.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <strong>
+                    Família & Lifestyle
+                </strong>
+
+                <p>
+                    Fotografias naturais, com espaço para que cada
+                    família seja simplesmente ela mesma.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <strong>
+                    Gestante
+                </strong>
+
+                <p>
+                    Um olhar sensível para registrar a espera,
+                    a conexão e a transformação desse momento.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <strong>
+                    Batizados & Eventos
+                </strong>
+
+                <p>
+                    A delicadeza dos rituais, dos encontros e
+                    das memórias compartilhadas em família.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page-number">04 / 05</div>
+
+</section>
+
+
+<!-- =========================
+     PÁGINA 5
+========================= -->
+
+<section class="contact">
+
+    <div class="contact-inner">
+
+        <div class="contact-small">
+            Viviane de Moraes · Fotografia Afetiva
+        </div>
+
+        <h2>
+            Vamos<br>
+            guardar esse momento?
+        </h2>
+
+        <div class="contact-links">
+
+            <a
+                class="contact-link"
+                href="https://instagram.com/vivdemoraes"
+                target="_blank"
+            >
+                Instagram
+            </a>
+
+            <!--
+            O número do WhatsApp será colocado aqui
+            assim que você me passar o link/número correto.
+            -->
+
+            <a
+                class="contact-link"
+                href="#"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+        <div class="footer">
+            Curitiba · Paraná
+        </div>
+
+    </div>
+
+    <div class="page-number">05 / 05</div>
+
+</section>
+
+</body>
+</html>
