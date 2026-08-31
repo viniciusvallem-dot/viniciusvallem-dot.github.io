@@ -360,8 +360,14 @@ Você arrasa demais”</p></blockquote><div class="testimonial-name">Giovanna Ri
     const surface = story.querySelector('.testimonial-photo');
     let current = 0;
     let timer;
-    function restart() {
+    let isVisible = false;
+    function stop() {
       clearInterval(timer);
+      timer = null;
+    }
+    function restart() {
+      stop();
+      if (!isVisible || story.hidden || document.hidden || story.dataset.lightboxOpen) return;
       timer = setInterval(() => {
         if (!story.hidden && !document.hidden && !story.dataset.lightboxOpen) show(current + 1, true);
       }, 3000);
@@ -393,7 +399,15 @@ Você arrasa demais”</p></blockquote><div class="testimonial-name">Giovanna Ri
       start = null;
     });
     surface.addEventListener('pointercancel', () => start=null);
-    restart();
+    show(0, true);
+    const visibilityObserver = new IntersectionObserver(([entry]) => {
+      const nowVisible = entry.isIntersecting && entry.intersectionRatio >= .55 && !story.hidden;
+      if (nowVisible === isVisible) return;
+      isVisible = nowVisible;
+      if (isVisible) show(0, true);
+      else stop();
+    }, {threshold:[0,.55,1]});
+    visibilityObserver.observe(surface);
   });
   const more = document.querySelector('.stories-more');
   more.addEventListener('click', () => {
