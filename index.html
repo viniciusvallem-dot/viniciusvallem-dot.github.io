@@ -218,15 +218,15 @@ body.nav-open .hero-logo-heading.logo-intro{opacity:0}
 .editorial-mosaic-grid figure:hover img{transform:scale(1.012)}
 .editorial-mosaic-grid figure:nth-child(1){grid-column:1;grid-row:span 4}
 .editorial-mosaic-grid figure:nth-child(2){grid-column:2;grid-row:span 6}
-.editorial-mosaic-grid figure:nth-child(3){grid-column:1;grid-row:span 6}
+.editorial-mosaic-grid figure:nth-child(3){grid-column:1;grid-row:span 5}
 .editorial-mosaic-grid figure:nth-child(4){grid-column:2;grid-row:span 4}
-.editorial-mosaic-grid figure:nth-child(5){grid-column:1;grid-row:span 4}
+.editorial-mosaic-grid figure:nth-child(5){grid-column:1;grid-row:span 6}
 .editorial-mosaic-grid figure:nth-child(6){grid-column:2;grid-row:span 5}
-.editorial-mosaic-grid figure:nth-child(7){grid-column:1;grid-row:span 5}
-.editorial-mosaic-grid figure:nth-child(8){grid-column:2;grid-row:span 4}
-.editorial-mosaic-grid figure:nth-child(9){grid-column:1;grid-row:span 6}
-.editorial-mosaic-grid figure:nth-child(10){grid-column:2;grid-row:span 6}
-.editorial-mosaic-grid figure:nth-child(11){grid-column:1;grid-row:span 5}
+.editorial-mosaic-grid figure:nth-child(7){grid-column:1;grid-row:span 4}
+.editorial-mosaic-grid figure:nth-child(8){grid-column:2;grid-row:span 6}
+.editorial-mosaic-grid figure:nth-child(9){grid-column:1;grid-row:span 5}
+.editorial-mosaic-grid figure:nth-child(10){grid-column:2;grid-row:span 4}
+.editorial-mosaic-grid figure:nth-child(11){grid-column:1;grid-row:span 6}
 .editorial-mosaic-grid figure:nth-child(12){grid-column:2;grid-row:span 5}
 @media(max-width:760px){.editorial-mosaic{padding-top:7vh}.editorial-mosaic-head{width:88vw;margin-bottom:2rem}.editorial-mosaic-grid{width:100%;grid-auto-rows:50px}.editorial-mosaic-grid img{transition:none}}
 .hero-slide:nth-child(4){object-position:60% 68%!important}@media(max-width:760px){.hero-slide:nth-child(4){object-position:60% 25%!important}}</style>
@@ -531,7 +531,7 @@ Você arrasa demais”</p></blockquote><div class="testimonial-name">Giovanna Ri
  const syncColor=()=>document.body.classList.toggle('logo-on-paper',nav.classList.contains('past-hero'));
  new MutationObserver(syncColor).observe(nav,{attributes:true,attributeFilter:['class']});
  syncColor();
- const start=()=>setTimeout(()=>document.body.classList.add('logo-compact'),3000);
+ const start=()=>setTimeout(()=>document.body.classList.add('logo-compact'),2000);
  if(document.readyState==='complete')start();
  else window.addEventListener('load',start,{once:true});
 })();
