@@ -1,0 +1,40 @@
+SITE VIVIANE DE MORAES — PACOTE COMPLETO
+
+Este pacote contém tudo o que é necessário para publicar o site do zero no GitHub Pages.
+
+COMO PUBLICAR EM UM REPOSITÓRIO VAZIO
+
+1. Extraia este arquivo ZIP no computador.
+2. Abra a pasta extraída.
+3. No GitHub, abra o repositório que hospedará o site.
+4. Clique em "Add file" e depois em "Upload files".
+5. Envie TODOS os itens que estão dentro da pasta extraída.
+6. O arquivo index.html, o CNAME e a pasta assets devem ficar na raiz do repositório.
+7. Confirme o envio em "Commit changes".
+8. Aguarde a conclusão do GitHub Pages e acesse:
+   https://www.vivianedemoraes.com.br/
+
+IMPORTANTE
+
+- Não coloque a pasta assets fora da raiz.
+- Não envie apenas o arquivo ZIP ao GitHub; ele precisa ser extraído primeiro.
+- Não altere os nomes dos arquivos.
+- Se o repositório estiver vazio, envie todo o conteúdo deste pacote.
+
+CONTEÚDO PRINCIPAL
+
+- index.html: página completa e atualizada do site.
+- assets/: fotografias, logotipos e demais recursos visuais.
+- CNAME: configuração do domínio personalizado.
+- favicon.ico e apple-touch-icon.png: ícones do site.
+- viviane-compartilhamento-v2.jpg: imagem de compartilhamento.
+- robots.txt e sitemap.xml: arquivos de indexação.
+
+VERSÃO FINAL
+
+- Mosaico com 12 fotografias e ampliação.
+- Enquadramentos personalizados das fotos 4 e 8.
+- Depoimentos com carrosséis ativados individualmente durante a visualização.
+- Logo da capa reduzida após 2 segundos.
+- Portfólios e contatos configurados.
+- Imagem após a seção Serviços removida.
