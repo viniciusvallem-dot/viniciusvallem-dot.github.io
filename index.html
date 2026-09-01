@@ -563,7 +563,7 @@ Você arrasa demais”</p></blockquote><div class="testimonial-name">Giovanna Ri
 </script>
 
 <script>
-/* Google Analytics 4: conversões e interações principais. */
+/* Google Analytics 4: mensuração comercial. */
 (() => {
   const sendEvent = (name, params = {}) => {
     if (typeof window.gtag !== 'function') return;
@@ -582,25 +582,25 @@ Você arrasa demais”</p></blockquote><div class="testimonial-name">Giovanna Ri
         : 'site';
 
     if (href.includes('wa.me/')) {
-      sendEvent('generate_lead', {
-        method: 'whatsapp',
+      sendEvent('click_whatsapp', {
+        contact_method: 'whatsapp',
         link_location: location
       });
       return;
     }
 
     if (link.classList.contains('port-card')) {
-      sendEvent('select_content', {
-        content_type: 'portfolio',
-        item_id: link.querySelector('h3')?.textContent.trim() || 'portfolio'
+      sendEvent('view_portfolio', {
+        portfolio_name: link.querySelector('h3')?.textContent.trim() || 'portfolio',
+        link_location: 'secao_portfolios'
       });
       return;
     }
 
     if (href.includes('instagram.com')) {
-      sendEvent('select_content', {
-        content_type: 'social',
-        item_id: 'instagram'
+      sendEvent('click_instagram', {
+        social_network: 'instagram',
+        link_location: location
       });
     }
   });
